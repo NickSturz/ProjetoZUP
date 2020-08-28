@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-size: 10px; 
+  }
+  
+  body {
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    margin: 0;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .img-responsive {
+    width: 40%;
+  }
+
+  .container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 960px;
+  }
+  
+  /* --- NAV --- */
+  .navegacao {
+    background-color: #000066;
+    color: white;
+    text-transform: uppercase;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+    padding: 1.5rem;
+    z-index: 99;
+    position: fixed;
+    width: 100%;
+    transition: all 1s;
+  }
+
+  .navegacao__logo {
+    max-width: 100px;
+  }
+
+  .navegacao__box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .formCadastro{
+      padding-top: 80px;
+      padding-left: 5px;
+      padding-bottom: 10px;
+  }
+
+  /* --- FOOTER --- */
+  .rodape {
+    background-color: #323534;
+    color: white;
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+  }
+  
+  .rodape__cc {
+    width: 100%;
+    background-color: #292a2a;
+    font-size: 1rem;
+    opacity: 0.5;
+    text-align: center;
+    padding-top: 8px;
+  }
+  
+  
+ 
+  /*** MEDIA QUERIES ***/
+  /* TABLET */
+  @media (min-width: 768px) {
+    .formCadastro{
+      
+      padding-left: 30px;
+      padding-bottom: 15px;
+      font-size: 1.2rem;
+  }
+
+    .rodape {
+      padding-top: 0;
+    }
+}
+    
+  
+  @media (min-width: 1024px) {
+    .navegacao__logo {
+      max-width: 200px;
+    }
+
+    .formCadastro{
+      padding-top:120px;
+  } 
+
+    .rodape__cc{
+        font-size: 1.6rem;
+    }
+  };  
+  
+  /* DESKTOP */
+  @media (min-width: 1440px) {
+    .navegacao__box {
+      max-width: 80%;
+    }
+  }

@@ -1,0 +1,31 @@
+package com.socialZuppers.Controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.socialZuppers.model.Usuarios;
+import com.usuarios.repository.UsuariosRepository;
+
+@Controller
+public class usuariosController {
+	
+	@Autowired
+	private UsuariosRepository er;
+	
+	@RequestMapping(value="/cadastrarUsuario", method=RequestMethod.GET)
+	public String form() {
+		return "usuarios/indexCreate";
+	}
+		
+		@RequestMapping(value="/cadastrarUsuario", method=RequestMethod.POST)
+		public String form(Usuarios evento) {
+			
+			er.save(evento);
+			
+			
+			return "redirect:/cadastrarUsuario";
+	}
+
+}

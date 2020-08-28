@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+  <head>
+    <meta charset="utf-8" />
+    <title>Zuppers Init</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+    <link rel="stylesheet" href="cssI/styleInit.css" />
+  </head>
+
+  <body>
+    <nav class="navegacao">
+      <div class="navegacao__box container">
+        <a class="navegacao__logo" href="../indexpage/IndexInit.html">
+          <img
+            class="img-responsive"
+            src="../img/ZPlogo.png"
+            alt="Logo ZP"
+          />
+        </a>
+        <div class="navegacao__itens" id="menuResponsivo">
+          <div class="navegacao__nav">
+            <ul>
+              <li>
+                <a href="../indexprofile/indexProfile.html">Meu Perfil</a>
+              </li>
+              <li>
+                <a href="#">Log Out</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <main>
+        <form>
+        	<div th:each="usuario : ${usuarios}">
+          		<div class="row">
+          			<p><span> th:text="${usuarios.nome}"+"${usuarios.sobrenome}" </span></p>
+          		</div>
+        	</div>
+        </form>
+    </main>
+    
+    <footer class="rodape">
+        <div class="rodape__cc">
+            <p>2020 | Feito por Nicolle</p>
+        </div>
+    </footer>
+
+  </body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+  <head>
+    <meta charset="utf-8" />
+    <title>Zuppers Init</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,700,900|Roboto+Slab:700|Roboto:400,400i"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" integrity="sha512-xA6Hp6oezhjd6LiLZynuukm80f8BoZ3OpcEYaqKoCV3HKQDrYjDE1Gu8ocxgxoXmwmSzM4iqPvCsOkQNiu41GA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="cssI/styleInit.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+  </head>
+
+  <body>
+    <nav class="navegacao">
+      <div class="navegacao__box container">
+        <a class="navegacao__logo" href="../indexpage/IndexInit.html">
+          <img
+            class="img-responsive"
+            src="../img/ZPlogo.png"
+            alt="Logo ZP"
+          />
+        </a>
+        <div class="navegacao__itens" id="menuResponsivo">
+          <div class="navegacao__nav">
+            <ul>
+              <li>
+                <a href="../indexpage/IndexInit.html">Home</a>
+              </li>
+              <li>
+                <a href="../indexprofile/indexProfile.html"
+                  >Meu Perfil</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  >Log Out</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="navegacao__menu-hamburguer dropdown" id="btnResponsivo">
+            <a href="#" class="nav-link dropdown-toggle fonte-texto" id="navbarDropDownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <img class="hamb" src="../img/menu-nav2.png" alt="Menu de navegação" />
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="../indexpage/IndexInit.html">Home</a></li>
+              <li><a class="dropdown-item" href="../indexprofile/indexProfile.html" >Meu Perfil</a></li>
+              <li><a class="dropdown-item" href="../indexLogin.html" target="_blank">Log Out</a></li>
+            </ul>
+          </div>
+      </div>
+    </nav>
+    <main>
+        <form>
+        	<div th:each="evento : ${usuarios}">
+          		<div class="row">
+          			<p><span>th:text="${usuarios.nome}"+"${usuarios.sobrenome}"</span></p>
+          		</div>
+        	</div>
+        </form>
+    </main>
+    
+    </div>
+
+    <footer class="rodape">
+        <div class="rodape__cc">
+            <p>2020 | Feito por Nicolle</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

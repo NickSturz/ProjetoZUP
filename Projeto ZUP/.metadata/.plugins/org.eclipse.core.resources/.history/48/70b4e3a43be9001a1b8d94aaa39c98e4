@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+  <head>
+    <title>Zuppers Init</title>
+    <link rel="stylesheet" href="cssI/styleInit.css" />
+  </head>
+
+  <body>
+  		<div th:each="usuario : ${usuarios}">
+          		<div class="row">
+					<div th:text="${usuarios.nome}"></div>
+          		</div>
+        	</div>
+  </body>
+</html>
